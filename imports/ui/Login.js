@@ -14,29 +14,32 @@ function verify(){
 export const Login = () => {
 
   return(
-    <div>
+    
+    <div id="page1">
       
-      <div>
-      <h1>Login</h1>
+      <div id="logDiv">
+      <h1>Welcome!</h1>
       <h2>Please Login to start</h2>
       </div>
-      
-      <div>
-        <label htmlFor="">User <input id="user" 
+      <div id="leborder"></div>
+
+      <div id="userDiv">
+        <label htmlFor="">User: <input id="user" 
         type="text" name="user" 
         placeholder="Enter your User or email"/></label>
       </div>
-      
-    
-      <div>
-        <label htmlFor="">Password <input id="password" 
+
+      <div id="leborder"></div>
+
+      <div id="passDiv">
+        <label htmlFor="">Password: <input id="password" 
         type="password" 
         name="password"  
         placeholder="Enter your Password"/></label>
       </div>
-
+      <div id="leborder"></div>
       <div>
-          <button onClick={verify}>Login</button>  
+          <button id="loginBot" onClick={verify}>Login</button>  
       <div>
        
     </div>
