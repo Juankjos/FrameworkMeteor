@@ -1,27 +1,17 @@
-import React, {useState} from 'react';
+import React from 'react';
 
+function verify(){
+  var user = document.getElementById("user").value;
+  var password = document.getElementById("password").value;
 
-function initialState(){
-  return { user: '', password: ''};
+  if(user == 'admin' && password == 'admin'){
+    alert("Success")
+  }else{
+    alert("Fail")
+  }
 }
 
-
 export const Login = () => {
-  /*I set the values for the fields*/
- const [values, setValues] = useState(initialState);
-
- /*Set the values to get data in the input*/
- function onChange(event){
-   const {value, name} = event.target;
-
-   setValues(
-     {
-       ...values,
-       [name]:value
-     }
-   );
- }
-
 
   return(
     <div>
@@ -34,8 +24,6 @@ export const Login = () => {
       <div>
         <label htmlFor="">User <input id="user" 
         type="text" name="user" 
-        onChange={onChange} 
-        value={values.user} 
         placeholder="Enter your User or email"/></label>
       </div>
       
@@ -43,14 +31,12 @@ export const Login = () => {
       <div>
         <label htmlFor="">Password <input id="password" 
         type="password" 
-        name="password" 
-        onChange={onChange} 
-        value={values.password} 
+        name="password"  
         placeholder="Enter your Password"/></label>
       </div>
 
       <div>
-          <button type="submit" >Login</button>  
+          <button onClick={verify}>Login</button>  
       <div>
        
     </div>
